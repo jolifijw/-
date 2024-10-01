@@ -1,0 +1,18 @@
+numbers = []
+print("Введите 10 чисел:")
+for i in range(10):
+  numbers.append(int(input()))
+
+sort_type = input("Выберите тип сортировки (1 - от большего к меньшему, 2 - от меньшего к большему, 3 - только четные): ")
+
+if sort_type == '1':
+  numbers.sort(reverse=True)
+elif sort_type == '2':
+  numbers.sort()
+elif sort_type == '3':
+  numbers = [x for x in numbers if x % 2 == 0]
+  numbers.sort()
+else:
+  print("Неверный тип сортировки")
+
+print(numbers)
